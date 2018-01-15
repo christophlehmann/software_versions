@@ -1,0 +1,36 @@
+sources:
+  dpa:
+   releases:
+     - jessie
+     - stretch
+
+packages:
+
+  php7.0:
+    # uses uscan
+    #upstream:
+    #  path: /path/to/sources
+
+    git:
+      url: https://github.com/php/php-src.git
+      tagRegex: 'php-7.0.[0-9]*'
+
+    debian:
+      name: php7.0
+
+    ppa:
+      url: https://launchpad.net/~ondrej/+archive/ubuntu/php
+      name: php7.0
+
+    dpa:
+      url: https://packages.sury.org/php
+      name: php7.0
+
+  php-xdebug:
+
+    pecl:
+     name: xdebug
+
+    dpa:
+      url: https://packages.sury.org/php
+      name: php-xdebug
